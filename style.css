@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffde7;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+#game-container {
+  text-align: center;
+}
+
+#counter {
+  font-size: 30px;
+  color: #f57f17;
+  margin-bottom: 30px;
+}
+
+.bear {
+  position: relative;
+  width: 130px;
+  height: 110px;
+  background: #bb8f4a;
+  border-radius: 50% 50% 45% 45%;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.ear {
+  position: absolute;
+  top: -15px;
+  width: 35px;
+  height: 35px;
+  background: #bb8f4a;
+  border-radius: 50%;
+}
+.ear.left { left: 5px; }
+.ear.right { right: 5px; }
+
+.eye {
+  position: absolute;
+  top: 40px;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  z-index: 2;
+}
+.eye.left { left: 35px; }
+.eye.right { right: 35px; }
+
+.blush {
+  position: absolute;
+  top: 52px;
+  width: 22px;
+  height: 12px;
+  background: #ffcdd2;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 1;
+}
+.blush.left { left: 18px; }
+.blush.right { right: 18px; }
+
+.snout {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+  background: #e3c08d;
+  border-radius: 50%;
+}
+
+.nose {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+}
+
+#honey {
+  font-size: 50px;
+  margin-top: 20px;
+  transition: transform 0.1s;
+}
+
+.wiggle { animation: bearWiggle 0.3s ease; }
+@keyframes bearWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
